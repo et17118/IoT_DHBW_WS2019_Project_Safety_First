@@ -1,0 +1,36 @@
+defmodule Parser do
+  use Platform.Parsing.Behaviour
+  
+  # ELEMENT IoT Parser for door and window sensor with Arduino
+  #
+  # Changelog
+  #   2019-11-15 [Pascal Hauck]: Initial version
+
+  def parse(<<0x01, state::integer-unsigned-8, battery::integer-unsigned-8>>, _meta) do
+  
+    contactstate = case state do
+      0 -> "closed"
+      1 -> "open"
+    end
+    
+    %{
+#      state: state,
+      contact_state: contactstate,
+      battery: battery/10,
+    }
+  end
+  
+   def fields() do
+    [
+      %{
+        "field" => "contact_state",
+        "display" => "Contact State",
+      },
+      %{
+        "field" => "battery_voltage",
+        "display" => "Battery voltage",
+        "unit" => "V"
+      },
+    ]
+  end
+end
