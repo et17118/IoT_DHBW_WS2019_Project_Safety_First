@@ -7,8 +7,7 @@ Project Safety First for IoT DHBW Winter Term 2019
 - Blog: http://www.hackster.io
 
 ## Developers
-- Pascal Hauck (@et17118)
-- Valentin Hirzel
-- Daniel Rother
 - Dimitri Miguschew
+- Pascal Hauck (@et17118)
 - Mario Renner
+- Daniel Rother
