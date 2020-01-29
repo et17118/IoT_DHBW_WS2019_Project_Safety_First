@@ -74,7 +74,7 @@ static osjob_t sendjob;
 
 
 // Sendeintervall in sec (könnte während der Laufzeit länger werden)
-unsigned TX_INTERVAL = 20;          //seconds of sleep between sends
+unsigned TX_INTERVAL = 600;        //seconds of sleep between sends
 
 
 unsigned SLEEPCYLCES= TX_INTERVAL/8; // calculate the number of sleepcycles (2s/8s) needed for the given TX_INTERVAL
